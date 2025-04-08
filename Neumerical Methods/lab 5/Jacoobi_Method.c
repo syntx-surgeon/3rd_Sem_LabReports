@@ -11,9 +11,7 @@ int main() {
     scanf("%d", &n);
 
     printf("\nInput coefficients row-wise:\n");
-    for (i = 1; i <= n; i++) {\
-        0
-        
+    for (i = 1; i <= n; i++) {
         for (j = 1; j <= n; j++) {
             scanf("%f", &a[i][j]);
         }
