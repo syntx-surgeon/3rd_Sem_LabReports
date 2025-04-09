@@ -1,0 +1,85 @@
+/*********************************ENCODER******************************************************/
+
+=======VHDL Code for 4 to 2 Encoder======
+
+entity encoder_4to2 is
+    Port ( a : in  STD_LOGIC_VECTOR (3 downto 0);
+           b : out  STD_LOGIC_VECTOR (1 downto 0));
+end encoder_4to2;
+
+architecture Behavioral of encoder_4to2 is
+begin
+process(a)
+begin
+ case a is
+when "0001" => b <= "00"; 
+when "0010" => b <= "01"; 
+when "0100" => b <= "10"; 
+when "1000" => b <= "11"; 
+when others => b <= "ZZ";
+ end case;
+end process;
+
+end Behavioral;
+
+
+
+=====Test bench 4 to 2 Encoder====
+stim_proc: process
+   begin
+a <= "0000";
+ wait for 100 ns;
+ a <= "0001";
+ wait for 100 ns;
+ a <= "0010";
+ wait for 100 ns;
+a <= "0100";
+wait for 100 ns;
+ a <= "1000";
+wait for 100 ns;
+wait;
+   end process;
+END;
+
+
+/*************************************************DECODER**************************************************************/
+
+=========VHDL Code for 2 to 4 decoder========
+
+
+entity decoder_2to4 is
+    Port ( a : in  STD_LOGIC_VECTOR (1 downto 0);
+           b : out  STD_LOGIC_VECTOR (3 downto 0));
+end decoder_2to4;
+architecture Behavioral of decoder_2to4 is
+begin
+
+process(a)
+begin
+case a is
+when "00" => b <= "0001"; 
+when "01" => b <= "0010"; 
+when "10" => b <= "0100"; 
+when "11" => b <= "1000";
+when others => b <= "ZZZZ";
+end case;
+end process;
+
+end Behavioral;
+
+
+
+
+====Test bench for 2 to 4 decoder=====
+
+-- Stimulus process
+   stim_proc: process
+   begin		
+		a <= "00"; 	wait for 100 ns;
+ 		a <= "01";	wait for 100 ns;
+ 		a <= "10";	wait for 100 ns;
+ 		a <= "11";	wait for 100 ns;
+      		wait;
+   end process;
+END;
+

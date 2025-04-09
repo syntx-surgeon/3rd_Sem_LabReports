@@ -1,0 +1,46 @@
+/********Design 4 bit ALU by using VHDL and verify its logical operation.*********/
+
+
+
+
+entity alu_1 is
+    Port ( A : in  STD_LOGIC_VECTOR (3 downto 0);
+           B : in  STD_LOGIC_VECTOR (3 downto 0);
+           SEL : in  STD_LOGIC_VECTOR (3 downto 0);
+           Y : out  STD_LOGIC_VECTOR (3 downto 0));
+end alu_1;
+architecture Behavioral of alu_1 is
+begin
+process(A,B,SEL)
+begin
+	case SEL is
+	when "0000" => Y <=  A and B;
+	when "0001" => Y <= A nand B;
+	when "0010" => Y <= A or B;
+	when others => NULL;   [[ i.e. when others => Y <= (others => 'Z');]]
+	end case;
+	end process;
+end Behavioral;
+
+
+
+
+
+-----Test bench for ALU 4 bit
+
+
+stim_proc: process
+begin		
+      
+		A<="0101"; B<="0101";
+		SEL <="0000";  wait for 100 ns;	
+		SEL <="0001"; wait for 100 ns;	
+		SEL <="0010";   wait for 100 ns;	
+		
+		A<="1101"; B<="1101";
+		SEL <="0000";  wait for 100 ns;	
+		SEL <="0001";  wait for 100 ns;	
+		SEL <="0010";  wait for 100 ns;	
+      		wait;
+	end process;
+END;

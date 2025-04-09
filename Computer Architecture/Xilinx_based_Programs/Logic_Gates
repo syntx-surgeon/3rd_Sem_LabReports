@@ -1,0 +1,40 @@
+---Logic Gates AND,OR,NOT,XOR------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity Logic_Gates is
+    Port ( A : in  STD_LOGIC;
+           B : in  STD_LOGIC;
+           Y : out  STD_LOGIC);
+end Logic_Gates;
+architecture Behavioral of Logic_Gates is
+begin
+process(A,B)
+
+-- AND, OR, NOT, XOR gates
+
+Y <= A AND B;  ======AND gate
+Y <= A OR B;   ======OR gate
+Y <= NOT ( A );======NOT Gate
+Y <= A XOR B;======XOR gate
+
+
+
+
+end process;
+end Behavioral;
+
+
+-- Test Bench for Logic Gates
+
+Simulation ( Test Bench)
+   begin		
+   a<='0'; b<='0'; wait for 100 ns;	
+   a<='0'; b<='1'; wait for 100 ns;	
+   a<='1'; b<='0'; wait for 100 ns;	
+   a<='1'; b<='1'; wait for 100 ns;	
+  end process;
+END;
