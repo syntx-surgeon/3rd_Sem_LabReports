@@ -1,5 +1,9 @@
+// DDA Line Drawing Algorithm in C
+// This program uses the DDA (Digital Differential Analyzer) algorithm to draw a line between two points in a graphics window.
+// The program prompts the user to enter the coordinates of the two points and then uses the DDA algorithm to calculate the intermediate points on the line and draw them using the putpixel function.
+// The program uses the graphics.h library, which is a part of the Turbo C/C++ compiler. Make sure to set up the graphics library correctly before running this code.
+// Note: This code is intended to be run in a Turbo C/C++ environment with the graphics library available.
 
-//dda algorithm
 #include <graphics.h>
 #include <math.h>
 #include <conio.h>
