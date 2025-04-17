@@ -36,9 +36,33 @@ Implementation of various computer graphics algorithms and techniques:
   - Polygon Fill Algorithm
 
 ### 2. Computer Architecture
-- Xilinx-based Programs
-- C and C++ Programs
-- Hardware implementations and simulations
+Implementation of computer architecture concepts and digital logic:
+
+#### C and C++ Programs
+- Arithmetic Operations
+  - One's and Two's Complement
+  - Signed Magnitude Multiplication
+  - Booth's Multiplication Algorithm
+  - Restoring Division
+  - Non-Restoring Division
+
+#### Xilinx-based Programs
+- Basic Logic Components
+  - Logic Gates Implementation
+  - Half Adder and Full Adder
+  - Encoder and Decoder
+  - 4:1 Multiplexer and 1:4 Demultiplexer
+  - 4-Bit ALU (Arithmetic Logic Unit)
+
+#### Hardware Implementations
+- Digital Logic Design
+  - Combinational Circuits
+  - Sequential Circuits
+  - Arithmetic Circuits
+- Computer Organization
+  - ALU Operations
+  - Memory Operations
+  - Control Unit Design
 
 ### 3. Data Structures and Algorithms
 Implementation of fundamental data structures and algorithms:
@@ -136,27 +160,91 @@ Lab reports covering various statistical concepts:
 ```
 3rd_Sem_LabReports/
 ├── Computer Graphics/
-│   ├── Basic Drawing Algorithms/
+│   ├── Basic Drawing/
+│   │   ├── DrawLine_Function.c
+│   │   ├── Bresenham's_Algorithm.c
+│   │   ├── DDA.c
+│   │   ├── MidPoint_CircleAlgorithm.c
+│   │   ├── MidPoint_EllipseAlgorithm.c
+│   │   ├── RectangleDraw.c
+│   │   └── TriangleDraw.c
 │   ├── 2D Transformations/
+│   │   ├── 2D_Translation.c
+│   │   ├── 2D_Rotation.c
+│   │   ├── 2D_Scaling.c
+│   │   ├── 2D_Shearing.c
+│   │   └── 2D_Reflection.c
 │   ├── 3D Transformations/
+│   │   ├── 3D_Translation.c
+│   │   ├── 3D_Rotation.c
+│   │   ├── 3D_Scaling.c
+│   │   └── 3D_Shearing.c
 │   ├── Clipping Algorithms/
+│   │   ├── Cohen_SutherLandLine_Clipping.c
+│   │   ├── Liang_BarskyLine_Clipping.c
+│   │   └── Sutherland_Hodgman_(Polygon_Clipping).c
 │   └── Hidden Surface Algorithms/
+│       ├── Back_Face_DetectionAlgorithm.c
+│       ├── Z-BufferAlgorithm.c
+│       ├── A-BufferAlgorithm.c
+│       ├── Painter's_Algorithm.c
+│       └── ScanLine_Algorithm.c
 ├── Computer Architecture/
-│   ├── Xilinx_based_Programs/
-│   └── C and Cpp program/
+│   ├── C and Cpp program/
+│   │   ├── onestwosComplement.cpp
+│   │   ├── Muliplication_Of_SignedMagnitude.c
+│   │   ├── booth_Multiplication.cpp
+│   │   ├── restoring.cpp
+│   │   └── non-restoring.cpp
+│   └── Xilinx_based_Programs/
+│       ├── Logic_Gates
+│       ├── HalfAdder__FullAdder
+│       ├── Encoder__Decoder
+│       ├── 4_1MUX___1_4DMUX
+│       └── 4_BIT_ALU
 ├── Data Structure And Algorithm/
 │   ├── Basic Operations/
+│   │   ├── factorial.c
+│   │   ├── fibonacci.c
+│   │   ├── GCD.c
+│   │   ├── TOH.c
+│   │   └── Tail_Recursion.c
+│   ├── Memory Management/
+│   │   ├── malloc.c
+│   │   ├── calloc.c
+│   │   └── realloc.c
 │   ├── Data Structures/
-│   ├── Algorithms/
-│   └── Advanced Topics/
+│   │   ├── stack.c
+│   │   ├── linerqueue.c
+│   │   ├── BST.c
+│   │   ├── SinglyLInkedlistInsertion.c
+│   │   └── DoublyLinkedListDelete.c
+│   ├── Searching/
+│   │   ├── LinearSearch.c
+│   │   └── BinarySearch.c
+│   ├── Sorting/
+│   │   ├── BubbleSort.c
+│   │   ├── SelectionSort.c
+│   │   └── InsertionSort.c
+│   └── Advanced Algorithms/
+│       ├── DIjkstra.c
+│       ├── Prim's.c
+│       ├── DoubleAndQuadriticHashing.c
+│       └── PostoRprefix.c
 ├── Numerical Methods/
-│   ├── lab 1/
-│   ├── lab 2/
-│   ├── lab 3/
-│   ├── lab 4/
-│   └── lab 5/
+│   ├── lab 1/ (Root Finding Methods)
+│   ├── lab 2/ (Interpolation and Curve Fitting)
+│   ├── lab 3/ (Numerical Integration and Differentiation)
+│   ├── lab 4/ (Ordinary Differential Equations)
+│   └── lab 5/ (Linear Algebra and Eigenvalues)
 └── Stat II/
-    └── Lab Reports/
+    ├── Stats_Lab_no1.docx
+    ├── stats_lab_no_02.docx
+    ├── stats (lab_no_3 ).docx
+    ├── stats Lab no 4.docx
+    ├── stats_lab_no_5.docx
+    ├── STAT_LAB_06.docx
+    └── Stats_Lab_07.docx
 ```
 
 ## How to Use
